@@ -1,15 +1,23 @@
-
+import React, {useState, useEffect} from 'react';
 import './App.css';
-import Search from './components/search'
+import YoutubeEmbed from './Components/Player';
+import Search from './Components/SearchForm';
 
-import YouTubePlayer from './components/player'
 
 function App() {
+
+const [youtubeId, setYoutubeId] = useState('OT8if6DXOFQ')
+
+function CallBack(id) {
+  setYoutubeId(id)
+}
+
   return (
-    <div className="App">
-      <Search />
-      <YouTubePlayer />
+    <div>
+      <Search callBack={CallBack}/>
+      <YoutubeEmbed embedId={youtubeId} />
     </div>
+
   );
 }
 
