@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import YouTubeApi from './YouTubeApi'
+import YouTubeApi from '../Api/YouTubeApi'
 
 
 export default function Search({callBack}) {
