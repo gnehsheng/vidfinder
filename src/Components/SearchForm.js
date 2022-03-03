@@ -13,7 +13,8 @@ export default function Search({callBack}) {
                         q: search
                     }
                 })
-                callBack(response.data.items[0].id.videoId)
+                // callBack(response.data.items[0].id.videoId)
+                callBack(response.data.items)
     }
 
     return (

@@ -1,7 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const YoutubeEmbed = ({ embedId }) => (
+const YoutubeEmbed = ({ embedId }) => {
+  if (!embedId) {
+    return (
+      <p style={{ textAlign: "center", fontSize: "18px", fontWeight: "bold" }}>
+        Search for a video
+      </p>
+    );
+  }
+  return (
   <div className="video-responsive">
     <iframe
       src={`https://www.youtube.com/embed/${embedId}`}
@@ -11,7 +19,8 @@ const YoutubeEmbed = ({ embedId }) => (
       title="Embedded youtube"
     />
   </div>
-);
+  )
+  };
 
 YoutubeEmbed.propTypes = {
   embedId: PropTypes.string.isRequired
