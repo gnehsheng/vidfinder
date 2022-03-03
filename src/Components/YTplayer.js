@@ -5,7 +5,7 @@ const YoutubeEmbed = ({ embedId }) => {
   if (!embedId) {
     return (
       <p style={{ textAlign: "center", fontSize: "18px", fontWeight: "bold" }}>
-        Search for a video
+        YT PLAYER HERE FOR NOW
       </p>
     );
   }

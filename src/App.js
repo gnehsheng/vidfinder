@@ -4,17 +4,11 @@ import YoutubeEmbed from './Components/YTplayer';
 import Search from './Components/SearchForm';
 import VimeoEmbed from './Components/VimeoPlayer';
 
-const style ={
-  color: 'black',
-  fontFamily: 'Arial',
-  width: '100px',
-
-}
 
 function App() {
 
-  const [youtubeId, setYoutubeId] = useState('OT8if6DXOFQ')
-  const [vimeoId, setVimeoId] = useState('588242833')
+  const [youtubeId, setYoutubeId] = useState()
+  const [vimeoId, setVimeoId] = useState()
   const [ytArr, setYtArr] = useState([])
 
   function CallBack(arr) {
