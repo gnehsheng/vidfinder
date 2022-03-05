@@ -2,23 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const VimeoEmbed = ({ embedId }) => {
-  if (!embedId) {
     return (
-      <p style={{ textAlign: "center", fontSize: "18px", fontWeight: "bold" }}>
-        VIMEO PLAYER HERE FOR NOW
-      </p>
+      <div style={{display: embedId ? '' : 'none'}} className="video-responsive">
+        <iframe
+          src={`https://player.vimeo.com/video/${embedId}`}
+          frameBorder="0"
+          allowFullScreen
+          title="Embedded Vimeo"
+        />
+      </div>
     );
-  }
-
-  <div className="video-responsive">
-    <iframe
-      src={`https://player.vimeo.com/video/${embedId}`}
-      frameBorder="0"
-      allowFullScreen
-      title="Embedded Vimeo"
-    />
-  </div>
-  }
+}
 
 
 VimeoEmbed.propTypes = {
