@@ -12,19 +12,25 @@ function App() {
   const [vimeoId, setVimeoId] = useState()
   const [dmId, setDmId] = useState()
   const [ytArr, setYtArr] = useState([])
+  
+  const [dmArr, setDmArr] = useState([])
 
-  function CallBack(arr) {
-    // setYoutubeId(id)
-    setYtArr(arr)
+  // function CallBack(arr) {
+  //   // setYoutubeId(id)
+  //   setYtArr(arr)
+    
+  // }
+
+  function DmCallBack(arr) {
+    setDmArr(arr)
   }
 
   return (
     <div>
-      <Search callBack={CallBack} />
+      <Search callBack={DmCallBack} />
       <YoutubeEmbed embedId={youtubeId} />
 
-  
-        <div className='ytList'>{ytArr.map((el) => {
+        {/* <div className='ytList'>{ytArr.map((el) => {
 
           return (
             <div onClick={() => { setYoutubeId(el.id.videoId) }}>
@@ -36,13 +42,23 @@ function App() {
             </div>
           )
         }
+
         )}
-        </div>
+        </div> */}
       
+      <div className='dmList'>{dmArr.map((el) => {
+        return(
+          <div p>
+            <DmEmbed embedId={el.id} />
+          </div>
+        )
+      })
+    }
+        </div>
 
 
       <VimeoEmbed embedId={vimeoId} />
-      <DmEmbed embedId={dmId} />
+      
     </div>
 
   );
