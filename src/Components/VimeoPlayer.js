@@ -5,7 +5,7 @@ const VimeoEmbed = ({ embedId }) => {
     return (
       <div style={{display: embedId ? '' : 'none'}} className="video-responsive">
         <iframe
-          src={`https://player.vimeo.com/video/${embedId}`}
+          src={embedId}
           frameBorder="0"
           allowFullScreen
           title="Embedded Vimeo"
