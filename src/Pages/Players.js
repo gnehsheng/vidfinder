@@ -2,8 +2,8 @@ import { useState } from "react";
 import Search from "../Components/SearchForm";
 
 import YoutubeEmbed from '../Components/YTplayer'
-import VimeoEmbed from '../Components/VimeoPlayer';
-import DmEmbed from '../Components/DailyMotionPlayer';
+// import VimeoEmbed from '../Components/VimeoPlayer';
+// import DmEmbed from '../Components/DailyMotionPlayer';
 
 export default function Players() {
 
