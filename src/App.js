@@ -10,6 +10,7 @@ import Players from './Pages/Players';
 function App() {
 
   return (
+    
 
     <BrowserRouter>
     <Navbar />
