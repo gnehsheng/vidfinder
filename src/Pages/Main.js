@@ -1,8 +1,16 @@
 import React from "react";
 import logo from '../Images/VIDFINDER LOGO-01.png'
 import { Dimensions } from 'react'
+import FeatureBox from "../Components/FeatureBox";
+import { useNavigate } from "react-router-dom";
 
 export default function MainPage() {
+
+    let navigate = useNavigate();
+    const routeChange = () => {
+        let path = `/players`;
+        navigate(path);
+    }
 
     return (
         <div>
@@ -18,6 +26,14 @@ export default function MainPage() {
                 Vidfinder takes the top results from YouTube, DailyMotion and Vimeo, and returns
                 them all to you in one convenient location!
             </p>
+
+            <FeatureBox />
+            <button className='button'
+                onClick={routeChange}
+                primary
+            >
+                Get Started
+            </button>
 
             <footer>
                 Created by Ng Yong Sheng (Source at <a href={'https://github.com/gnehsheng?tab=repositories'}>github</a>)

@@ -8,8 +8,6 @@ const DmEmbed = ({ embedId }) => {
                 src={`https://geo.dailymotion.com/player/x7zur.html?video=${embedId}`}
                 allowfullscreen
                 frameBorder="0"
-                width="640"
-                height="360"
                 allow="autoplay; fullscreen; picture-in-picture"
                 title="Embedded DailyMotion"
             />

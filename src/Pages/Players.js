@@ -1,17 +1,14 @@
 import { useState } from "react";
 import Search from "../Components/SearchForm";
+import '../App.css'
 
 import YoutubeEmbed from '../Components/YTplayer'
-// import VimeoEmbed from '../Components/VimeoPlayer';
-// import DmEmbed from '../Components/DailyMotionPlayer';
+import VimeoEmbed from '../Components/VimeoPlayer';
+import DmEmbed from '../Components/DailyMotionPlayer';
 
 export default function Players() {
 
     const [videoArr, setVideoArr] = useState([])
-
-    // const [youtubeId, setYoutubeId] = useState()
-    // const [vimeoId, setVimeoId] = useState()
-    // const [dmId, setDmId] = useState()
 
     function CallBack(arr) {
         setVideoArr(arr)
@@ -20,74 +17,56 @@ export default function Players() {
     return (
         <div>
             <Search callBack={CallBack} />
-
-            <div>{videoArr.map((arr) => {
-                return (
-                    arr.map((el) => {
+            <div className="players">
+                {videoArr.map((arr, index) => {
+                    if (index === 0) {
                         return (
-                            <div>
-                                <YoutubeEmbed embedId={el.id} />
-                            </div>
+                            arr.map((el) => {
+                                return (
+                                    <div className="YouTubePlayer">
+                                        <YoutubeEmbed embedId={el.id} />
+                                    </div>
+                                )
+                            }
+                            )
                         )
-                    })
-                )
-            })}
+                    }
+
+                    if (index === 1) {
+                        return (
+                            arr.map((el) => {
+                                return (
+                                    <div className="VimeoPlayer">
+                                        <VimeoEmbed embedId={el.id} />
+                                    </div>
+                                )
+                            }
+                            )
+                        )
+                    }
+
+                    if (index === 2) {
+                        return (
+                            arr.map((el) => {
+                                return (
+                                    <div className="DailyMotionPlayer">
+                                        <DmEmbed embedId={el.id} />
+                                    </div>
+                                )
+                            }
+                            )
+                        )
+                    }
+
+                })}
+
             </div>
 
-            {/* /////////////////////////////////////////////////////////////////////////// */}
-            {/* <div> */}
-
-                {/* <YoutubeEmbed embedId={youtubeId} />
-                <VimeoEmbed embedId={vimeoId} />
-                <DmEmbed embedId={dmId} /> */}
-
-                {/* Youtube */}
-                {/* <div className='ytList'>{videoArr.map((el) => {
-                    return (
-                        <div onClick={() => { setYoutubeId(el.id.videoId) }}>
-                            <img style={{ cursor: 'pointer' }}
-                                src={el.snippet.thumbnails.default.url}
-                                alt=''
-                            />
-                            <p>{el.snippet.title}</p>
-                        </div>
-                    )
-                })}
-                </div> */}
-
-                {/* DailyMotion */}
-                {/* <div className='dmList'>{videoArr.map((arr) => {
-                    arr.map((el) => {
-                        return (
-                            <div p>
-                                {el.id}
-                            </div>
-                        )
-
-                    })
-                    return (
-                        <div p>
-
-                        </div>
-                    )
-                })
-                }
-                </div> */}
-
-                {/* Vimeo */}
-                {/* <div className='vmList'>{vmArr.map((el) => {
-                    return (
-                        <div>
-                            {<VimeoEmbed embedId={el.player_embed_url} />}
-                        </div>
-                    )
-                })
-                }
-                </div> */}
-
-            {/* </div> */}
-            {/* //////////////////////////////////////////////////////////////////////////////////// */}
-
+            <footer>
+                Created by Ng Yong Sheng (Source at <a href={'https://github.com/gnehsheng?tab=repositories'}>github</a>)
+            </footer>
+            
         </div>
     )
+
 }

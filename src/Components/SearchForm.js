@@ -3,6 +3,7 @@ import { useState } from 'react'
 import YouTubeApi from '../Api/YouTubeApi'
 import DailyMotionApi from '../Api/DailyMotionApi'
 import VimeoApi from '../Api/VimeoApi'
+import '../App.css'
 
 
 export default function Search({ callBack }) {
@@ -22,18 +23,18 @@ export default function Search({ callBack }) {
         } catch {
             throw Error('Promise Failed')
         }
-       
     }
 
     async function GetYouTube() {
         const response = await YouTubeApi.get('/search', {
             params: { q: search }
         })
-
         const arr = response.data.items.map(el => {
             return (
                 {
                     id: el.id.videoId,
+                    // title: el.snippet.title,
+                    // description: el.snippet.description,
                     tag: 'Youtube'
                 }
             )
@@ -43,11 +44,12 @@ export default function Search({ callBack }) {
 
     async function GetVimeo() {
         const response = await VimeoApi.get(`?query=${search}`)
-
         const arr = response.data.data.map(el => {
             return (
                 {
                     id: el.player_embed_url,
+                    // title:el.name,
+                    // description: el.description,
                     tag: 'Vimeo'
                 }
             )
@@ -57,11 +59,13 @@ export default function Search({ callBack }) {
     
     async function GetDailymotion() {
         const response = await DailyMotionApi.get(`?search=${search}`)   
-
         const arr = response.data.list.map(el => {
+            console.log(response.data.list)
             return (
                 {
                     id: el.id,
+                    // title: el.title,
+                    // description: ''
                     tag: 'DailyMotion'
                 }
             )
@@ -99,7 +103,7 @@ export default function Search({ callBack }) {
     // }
 
     return (
-        <div class='search'>
+        <div className='search'>
             <input
                 type="text"
                 placeholder="Input here"

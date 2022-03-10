@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const YoutubeEmbed = ({ embedId }) => {
 
   return (
-    <div style={{display: embedId ? '' : 'none', width:'560px', height:'340px'}} className="video-responsive">
+    <div style={{display: embedId ? '' : 'none'}} className="video-responsive">
       <iframe
         src={`https://www.youtube.com/embed/${embedId}`}
         frameBorder="0"

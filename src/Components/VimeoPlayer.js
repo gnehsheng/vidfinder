@@ -14,7 +14,6 @@ const VimeoEmbed = ({ embedId }) => {
     );
 }
 
-
 VimeoEmbed.propTypes = {
   embedId: PropTypes.string.isRequired
 };
