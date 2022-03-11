@@ -1,5 +1,6 @@
 {
-  "name": "watch2gether",
+  "name": "vidfinder",
+  "homepage": "https://gnehsheng.github.io/vidfinder",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,6 +19,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "react-grid-system": "^8.1.3",
     "react-player": "^2.9.0",
     "react-router-dom": "^6.2.2",
