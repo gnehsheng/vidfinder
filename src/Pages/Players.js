@@ -59,11 +59,10 @@ export default function Players() {
                     }
 
                 })}
-
             </div>
 
             <footer>
-                Created by Ng Yong Sheng (Source at <a href={'https://github.com/gnehsheng?tab=repositories'}>github</a>)
+                Created by Ng Yong Sheng (Source at <a href={'https://github.com/gnehsheng/vidfinder'}>github</a>)
             </footer>
             
         </div>
