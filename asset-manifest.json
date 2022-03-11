@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/vidfinder/static/css/main.8fb258c1.css",
+    "main.js": "/vidfinder/static/js/main.41a0fd0b.js",
+    "static/js/787.1e0c0f99.chunk.js": "/vidfinder/static/js/787.1e0c0f99.chunk.js",
+    "static/media/VIDFINDER LOGO-01.png": "/vidfinder/static/media/VIDFINDER LOGO-01.ea487fb10a44d088b7eb.png",
+    "index.html": "/vidfinder/index.html",
+    "main.8fb258c1.css.map": "/vidfinder/static/css/main.8fb258c1.css.map",
+    "main.41a0fd0b.js.map": "/vidfinder/static/js/main.41a0fd0b.js.map",
+    "787.1e0c0f99.chunk.js.map": "/vidfinder/static/js/787.1e0c0f99.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8fb258c1.css",
+    "static/js/main.41a0fd0b.js"
+  ]
+}
