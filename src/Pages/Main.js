@@ -1,6 +1,5 @@
 import React from "react";
 import logo from '../Images/VIDFINDER LOGO-01.png'
-import { Dimensions } from 'react'
 import FeatureBox from "../Components/FeatureBox";
 import { useNavigate } from "react-router-dom";
 

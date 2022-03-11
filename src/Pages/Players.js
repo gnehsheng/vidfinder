@@ -12,6 +12,7 @@ export default function Players() {
 
     function CallBack(arr) {
         setVideoArr(arr)
+
     }
 
     return (

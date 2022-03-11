@@ -60,7 +60,7 @@ export default function Search({ callBack }) {
     async function GetDailymotion() {
         const response = await DailyMotionApi.get(`?search=${search}`)   
         const arr = response.data.list.map(el => {
-            console.log(response.data.list)
+        
             return (
                 {
                     id: el.id,
@@ -72,35 +72,6 @@ export default function Search({ callBack }) {
         })
         return arr
     }
-
-    // function GetVimeo() {
-    //     const response =  DailyMotionApi.get(`?search=${search}`)
-    // }
-
-    // function GetDailymotion() {
-    //     const response =  VimeoApi.get(`?query=${search}`)
-    // }
-
-    // async function handleClick() {
-    //     const response = await YouTubeApi.get('/search',{
-    //                 params:{
-    //                     q: search
-    //                 }
-    //             })
-    //             callBack(response.data.items)
-    // }
-
-    // async function handleClick() {
-    //     const response = await DailyMotionApi.get(`?search=${search}`)                
-    //             callBack(response.data.list)
-
-    // }
-
-    // async function handleClick() {
-    //     const response = await VimeoApi.get(`?query=${search}`)                
-    //             callBack(response.data.data)
-
-    // }
 
     return (
         <div className='search'>
