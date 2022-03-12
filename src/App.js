@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path='/' element={<MainPage />} />
+        <Route path='/vidfinder' element={<MainPage />} />
         <Route path='/home' element={<MainPage />} />
         <Route path='/players' element={<Players />} />
       </Routes>

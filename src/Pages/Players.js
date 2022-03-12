@@ -32,7 +32,7 @@ export default function Players() {
                         )
                     }
 
-                    if (index === 1) {
+                    else if (index === 1) {
                         return (
                             arr.map((el) => {
                                 return (
@@ -45,7 +45,7 @@ export default function Players() {
                         )
                     }
 
-                    if (index === 2) {
+                    else if (index === 2) {
                         return (
                             arr.map((el) => {
                                 return (
@@ -57,6 +57,7 @@ export default function Players() {
                             )
                         )
                     }
+                    else return (<div></div>)
 
                 })}
             </div>
