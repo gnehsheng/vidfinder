@@ -18,6 +18,6 @@ HTML <br />`
 
 APIs: Vimeo, DailyMotion & Google 
 
-https://developers.google.com/youtube/v3
-https://developer.vimeo.com/api/reference/v/3.4
-https://developers.dailymotion.com/api/#graph-api
+https://developers.google.com/youtube/v3 <br />
+https://developer.vimeo.com/api/reference/v/3.4 <br />
+https://developers.dailymotion.com/api/#graph-api 
